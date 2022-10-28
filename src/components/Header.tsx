@@ -2,10 +2,14 @@ import React from "react";
 import logo from "../assets/LOGO_1.svg";
 import { FaBars } from "react-icons/fa";
 import { Carousel } from "react-responsive-carousel";
+import home from "../assets/02.jpg";
 
 function Header() {
   return (
-    <div className="relative h-[95vh] w-full bg-gray-200 bg-headerBG bg-no-repeat bg-cover bg-center shadow-header pt-[3%] box-border before:content-[''] before:absolute before:w-full before:h-full before:top-0 before:bg-medium-opacity backdrop-brightness-75 backdrop-contrast-125">
+    <div
+      style={{ backgroundImage: `url(${home})` }}
+      className="relative h-[95vh] w-full bg-gray-200 bg-no-repeat bg-cover bg-center shadow-header pt-[3%] box-border before:content-[''] before:absolute before:w-full before:h-full before:top-0 before:bg-medium-opacity backdrop-brightness-75 backdrop-contrast-125"
+    >
       <div className="w-full h-[20%] flex items-center justify-between px-[12%] box-border">
         <img src={logo} alt="" className="z-[100] w-[18%]" />
         <div className="z-[100] w-[50%] h-full flex items-center justify-between">
