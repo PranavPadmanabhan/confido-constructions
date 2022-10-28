@@ -5,14 +5,25 @@ import cap from "../assets/ENGHELM.svg";
 import protractor from "../assets/PROTACTOR.svg";
 import brain from "../assets/BRAIN.svg";
 import hand from "../assets/HAND.svg";
+import home1 from "../assets/01.jpg";
+import home2 from "../assets/02.jpg";
 
 function About() {
   return (
     <section className="w-full h-[130vh] flex flex-col items-center justify-start  scrollbar-hide">
       <div className="relative w-full h-[32%] flex items-center justify-center">
-        <div className="w-full h-full bg-home1 bg-no-repeat bg-cover bg-center shadow-img backdrop-brightness-75"></div>
-        <div className="w-full h-full bg-headerBG bg-no-repeat bg-cover bg-center shadow-img backdrop-brightness-75"></div>
-        <div className="w-full h-full bg-headerBG bg-no-repeat bg-cover bg-center shadow-img backdrop-brightness-75"></div>
+        <div
+          style={{ backgroundImage: `url(${home1})` }}
+          className="w-full h-full  bg-no-repeat bg-cover bg-center shadow-img backdrop-brightness-75"
+        ></div>
+        <div
+          style={{ backgroundImage: `url(${home2})` }}
+          className="w-full h-full  bg-no-repeat bg-cover bg-center shadow-img backdrop-brightness-75"
+        ></div>
+        <div
+          style={{ backgroundImage: `url(${home1})` }}
+          className="w-full h-full  bg-no-repeat bg-cover bg-center shadow-img backdrop-brightness-75"
+        ></div>
         <div className="absolute w-full h-full bg-green-accent flex items-center justify-between px-[8%] box-border">
           <div className="w-full h-full flex flex-col items-center justify-center">
             <h1 className="text-white -mt-[15%] mb-[8%] text-[1.1rem] font-light">
@@ -106,9 +117,18 @@ function About() {
               );
             }}
           >
-            <div className="h-[50vh] w-[100%] bg-transparent bg-headerBG bg-no-repeat bg-cover"></div>
-            <div className="h-[50vh] w-[100%] bg-transparent bg-headerBG bg-no-repeat bg-cover"></div>
-            <div className="h-[50vh] w-[100%] bg-transparent bg-headerBG bg-no-repeat bg-cover"></div>
+            <div
+              style={{ backgroundImage: `url(${home1})` }}
+              className="h-[50vh] w-[100%] bg-transparent bg-no-repeat bg-cover"
+            ></div>
+            <div
+              style={{ backgroundImage: `url(${home2})` }}
+              className="h-[50vh] w-[100%] bg-transparent bg-no-repeat bg-cover"
+            ></div>
+            <div
+              style={{ backgroundImage: `url(${home1})` }}
+              className="h-[50vh] w-[100%] bg-transparent bg-no-repeat bg-cover"
+            ></div>
           </Carousel>
         </div>
       </div>

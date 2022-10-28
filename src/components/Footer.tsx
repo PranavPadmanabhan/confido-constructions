@@ -4,10 +4,14 @@ import whatsapp from "../assets/wht.svg";
 import instagram from "../assets/inst.svg";
 import linkedin from "../assets/link.svg";
 import facebook from "../assets/fb.svg";
+import home from "../assets/02.jpg";
 
 function Footer() {
   return (
-    <footer className="relative w-full h-[90vh] bg-white bg-headerBG bg-no-repeat bg-center bg-cover shadow-header before:content-[''] before:absolute before:w-full before:h-full before:bg-medium-opacity backdrop-brightness-75 flex flex-col items-center justify-center">
+    <footer
+      style={{ backgroundImage: `url(${home})` }}
+      className="relative w-full h-[90vh] bg-white bg-no-repeat bg-center bg-cover shadow-header before:content-[''] before:absolute before:w-full before:h-full before:bg-medium-opacity backdrop-brightness-75 flex flex-col items-center justify-center"
+    >
       <div className="z-[100] w-[85%] h-[85%] bg-transparent flex flex-col items-center justify-start">
         <div className="w-full h-[70%] flex items-center justify-center">
           <div className="w-[50%] h-full flex flex-col items-start justify-between p-[3%] box-border">
