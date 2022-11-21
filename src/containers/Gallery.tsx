@@ -4,12 +4,18 @@ import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
 import CarouselItem from "../components/CarouselItem";
 import { ImageViewContext } from "../contexts/ImageView";
 import ImageView from "../components/ImageView";
+import { images } from "../constants/constants";
 
 function Gallery() {
   const { isExpanded, setIsExpanded } = useContext(ImageViewContext);
+  const length =
+    window.innerWidth < 600 ? images.length : (images.length - 2) / 3;
+
+  console.log(length);
+
   return (
     <div className="relative w-full h-[50vh] sm:h-[100vh] flex flex-col items-center justify-start bg-white pt-0 sm:pt-[2%] pb-[5%] box-border ">
-      <h1 className="text-[#004a19] text-[1.9rem] font-bold self-start ml-[13%] mb-[2%] mt-[2%] sm:mt-0">
+      <h1 className="text-[#004a19] text-[1.9rem] font-bold self-start ml-[13%] mb-[2%] mt-[2%] sm:mt-0 tracking-widest">
         GALLERY
       </h1>
       <Carousel
@@ -49,9 +55,19 @@ function Gallery() {
           );
         }}
       >
-        <CarouselItem title={"CONTEMPORARY STYLE 3200 SQ.FT"} />
-        <CarouselItem title={"CONTEMPORARY STYLE 3200 SQ.FT"} />
-        <CarouselItem title={"CONTEMPORARY STYLE 3200 SQ.FT"} />
+        {Array(length)
+          .fill("")
+          .map((_, index) => {
+            console.log(index);
+            return (
+              <CarouselItem
+                title={"CONTEMPORARY STYLE 3200 SQ.FT"}
+                image1={images[index]}
+                image2={index - 2 < images.length ? images[index + 1] : null}
+                image3={index - 2 < images.length ? images[index + 2] : null}
+              />
+            );
+          })}
       </Carousel>
       {isExpanded && <ImageView />}
     </div>

@@ -7,6 +7,7 @@ import brain from "../assets/BRAIN.svg";
 import hand from "../assets/HAND.svg";
 import home1 from "../assets/01.jpg";
 import home2 from "../assets/02.jpg";
+import { images } from "../constants/constants";
 
 function About() {
   return (
@@ -117,18 +118,21 @@ function About() {
               );
             }}
           >
-            <div
-              style={{ backgroundImage: `url(${home1})` }}
-              className="h-[25vh] sm:h-[50vh] w-[100%] bg-transparent bg-no-repeat bg-cover"
-            ></div>
-            <div
+            {/* <div
               style={{ backgroundImage: `url(${home2})` }}
               className="h-[25vh] sm:h-[50vh] w-[100%] bg-transparent bg-no-repeat bg-cover"
             ></div>
             <div
               style={{ backgroundImage: `url(${home1})` }}
               className="h-[25vh] sm:h-[50vh] w-[100%] bg-transparent bg-no-repeat bg-cover"
-            ></div>
+            ></div> */}
+
+            {images.slice(0, 5).map((img, i) => (
+              <div
+                style={{ backgroundImage: `url(${img})` }}
+                className="h-[25vh] sm:h-[50vh] w-[100%] bg-transparent bg-no-repeat bg-cover"
+              ></div>
+            ))}
           </Carousel>
         </div>
       </div>

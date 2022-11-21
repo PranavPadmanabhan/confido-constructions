@@ -12,7 +12,6 @@ type props = {
 
 function CarouselItem({ image1, image2, image3, title }: props) {
   const width = title.length < 30 ? "max-w-[50%]" : "max-w-[85%]";
-  console.log(title.length);
 
   const { isExpanded, setIsExpanded, image, setImage } =
     useContext(ImageViewContext);
@@ -20,10 +19,10 @@ function CarouselItem({ image1, image2, image3, title }: props) {
     <div className="w-full sm:mt-0 -mt-[15%] h-[60vh] sm:h-[84vh] bg-transparent flex items-center justify-center">
       <div
         onClick={() => {
-          setImage(home2);
+          setImage(image1);
           setIsExpanded(true);
         }}
-        style={{ backgroundImage: `url(${home2})` }}
+        style={{ backgroundImage: `url(${image1})` }}
         className="h-[65%] sm:h-[93%] w-[80%] sm:w-[42%] bg-transparent rounded-3xl mr-0 sm:mr-[3%] bg-no-repeat bg-center bg-cover shadow-carousel-item flex flex-col items-start backdrop-brightness-75 justify-end p-[5%] sm:p-[2%] box-border"
       >
         <p
@@ -32,24 +31,26 @@ function CarouselItem({ image1, image2, image3, title }: props) {
           {title}
         </p>
       </div>
-      <div className="w-[28%] h-[93%] hidden sm:flex flex-col items-center justify-between bg-transparent ">
-        <div
-          onClick={() => {
-            setImage(home1);
-            setIsExpanded(true);
-          }}
-          style={{ backgroundImage: `url(${home1})` }}
-          className="h-[48%] w-full rounded-3xl bg-transparent bg-no-repeat bg-center bg-cover backdrop-brightness-75"
-        ></div>
-        <div
-          onClick={() => {
-            setImage(home1);
-            setIsExpanded(true);
-          }}
-          style={{ backgroundImage: `url(${home1})` }}
-          className="h-[48%] w-full rounded-3xl bg-transparent bg-no-repeat bg-center bg-cover backdrop-brightness-75"
-        ></div>
-      </div>
+      {image2 && image3 && (
+        <div className="w-[28%] h-[93%] hidden sm:flex flex-col items-center justify-between bg-transparent ">
+          <div
+            onClick={() => {
+              setImage(image2);
+              setIsExpanded(true);
+            }}
+            style={{ backgroundImage: `url(${image2})` }}
+            className="h-[48%] w-full rounded-3xl bg-transparent bg-no-repeat bg-center bg-cover backdrop-brightness-75"
+          ></div>
+          <div
+            onClick={() => {
+              setImage(image3);
+              setIsExpanded(true);
+            }}
+            style={{ backgroundImage: `url(${image3})` }}
+            className="h-[48%] w-full rounded-3xl bg-transparent bg-no-repeat bg-center bg-cover backdrop-brightness-75"
+          ></div>
+        </div>
+      )}
     </div>
   );
 }

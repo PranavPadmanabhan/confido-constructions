@@ -1,5 +1,6 @@
 import React from "react";
 import ServiceCard from "../components/ServiceCard";
+import { images } from "../constants/constants";
 
 function Services() {
   return (
@@ -11,12 +12,15 @@ function Services() {
         SEE SERVICES
       </h1>
       <div className="grid grid-cols-1  sm:grid-cols-3 w-full h-[100%] sm:h-[80%] gap-x-[30px] gap-y-[40px] place-items-center ">
-        <ServiceCard data={"PLANNING"} />
-        <ServiceCard data={"CONTRACTING & CONSTRUCTION MANAGEMENT"} />
-        <ServiceCard data={"3D MODELLING"} />
-        <ServiceCard data={"INTERIOR DESIGING"} />
-        <ServiceCard data={"RENOVATION & EXPANSION"} />
-        <ServiceCard data={"GREEN BUILDING"} />
+        <ServiceCard image={images[7]} data={"PLANNING"} />
+        <ServiceCard
+          image={images[2]}
+          data={"CONTRACTING & CONSTRUCTION MANAGEMENT"}
+        />
+        <ServiceCard image={images[3]} data={"3D MODELLING"} />
+        <ServiceCard image={images[4]} data={"INTERIOR DESIGING"} />
+        <ServiceCard image={images[6]} data={"RENOVATION & EXPANSION"} />
+        <ServiceCard image={images[1]} data={"GREEN BUILDING"} />
       </div>
     </section>
   );
