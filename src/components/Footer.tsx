@@ -57,21 +57,21 @@ function Footer() {
             Follow us
           </h1>
           <div className="flex w-[70%] sm:w-[12%] h-[50%] items-center justify-between mt-[2%] sm:mt-0">
-            <a href="">
+            <a href="https://www.facebook.com/profile.php?id=100076315896623&ref=page_internal">
               <img
                 src={facebook}
                 alt=""
                 className="w-[30px] h-[30px] sm:w-[25px] sm:h-[25px]"
               />
             </a>
-            <a href="">
+            <a href="https://www.instagram.com/confido_constructions/">
               <img
                 src={instagram}
                 alt=""
                 className="w-[30px] h-[30px] sm:w-[25px] sm:h-[25px]"
               />
             </a>
-            <a href="">
+            <a href="https://www.linkedin.com/in/confido-constructions-728bba235/">
               <img
                 src={linkedin}
                 alt=""
