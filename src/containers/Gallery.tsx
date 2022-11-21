@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import { Carousel } from "react-responsive-carousel";
 import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
 import CarouselItem from "../components/CarouselItem";
+import { ImageViewContext } from "../contexts/ImageView";
+import ImageView from "../components/ImageView";
 
 function Gallery() {
+  const { isExpanded, setIsExpanded } = useContext(ImageViewContext);
   return (
-    <div className="w-full h-[50vh] sm:h-[100vh] flex flex-col items-center justify-start bg-white pt-0 sm:pt-[2%] pb-[5%] box-border ">
+    <div className="relative w-full h-[50vh] sm:h-[100vh] flex flex-col items-center justify-start bg-white pt-0 sm:pt-[2%] pb-[5%] box-border ">
       <h1 className="text-[#004a19] text-[1.9rem] font-bold self-start ml-[13%] mb-[2%] mt-[2%] sm:mt-0">
         GALLERY
       </h1>
@@ -14,6 +17,7 @@ function Gallery() {
         showStatus={false}
         showIndicators={false}
         showArrows={true}
+        swipeable={false}
         renderArrowNext={(clickHandler, hasNext, label) => {
           return (
             <div
@@ -45,10 +49,11 @@ function Gallery() {
           );
         }}
       >
-        <CarouselItem />
-        <CarouselItem />
-        <CarouselItem />
+        <CarouselItem title={"CONTEMPORARY STYLE 3200 SQ.FT"} />
+        <CarouselItem title={"CONTEMPORARY STYLE 3200 SQ.FT"} />
+        <CarouselItem title={"CONTEMPORARY STYLE 3200 SQ.FT"} />
       </Carousel>
+      {isExpanded && <ImageView />}
     </div>
   );
 }

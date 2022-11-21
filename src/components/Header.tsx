@@ -38,8 +38,8 @@ function Header() {
       <div className="w-full h-[30vh] sm:h-[50vh]  flex flex-row items-center justify-center sm:justify-between px-[8%] sm:px-[12%] box-border mt-[15%] sm:mt-0">
         <p className="z-[100] text-white text-[7.5vw] sm:text-[2.5rem] font-light max-w-[100%] sm:max-w-[45%] text-center sm:text-left tracking-wider">
           YOUR MOST
-          <br /> <strong className="font-bold">TRUSTED</strong> BUILDING
-          <br /> <strong className="font-bold">PARTNER</strong>
+          <br /> <strong className="font-medium">TRUSTED</strong> BUILDING
+          <br /> <strong className="font-medium">PARTNER</strong>
         </p>
         <Carousel
           className="hidden sm:flex w-[30vw] h-[20vh] self-center pt-5"

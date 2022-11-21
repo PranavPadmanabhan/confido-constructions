@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./App.css";
 import Header from "./components/Header";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader

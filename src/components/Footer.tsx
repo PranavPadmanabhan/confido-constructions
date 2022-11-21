@@ -78,7 +78,7 @@ function Footer() {
                 className="w-[30px] h-[30px] sm:w-[25px] sm:h-[25px]"
               />
             </a>
-            <a href="">
+            <a href="https://wa.me/919656709729">
               <img
                 src={whatsapp}
                 alt=""
