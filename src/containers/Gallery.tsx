@@ -17,7 +17,7 @@ function Gallery() {
         renderArrowNext={(clickHandler, hasNext, label) => {
           return (
             <div
-              className={`absolute z-[100] right-[4%] sm:right-[5%] top-[33%] sm:top-[42%] min-w-[45px] min-h-[45px] sm:min-w-[70px] sm:min-h-[70px] w-[5vw] h-[5vw] cursor-pointer ${
+              className={`absolute z-[100] right-[4%] sm:right-[5%] top-[38%] sm:top-[42%] min-w-[45px] min-h-[45px] sm:min-w-[70px] sm:min-h-[70px] w-[5vw] h-[5vw] cursor-pointer ${
                 hasNext ? "bg-[#f2f2f2]" : "bg-transparent"
               } rounded-[100%] flex items-center justify-center `}
               onClick={hasNext ? clickHandler : () => null}
@@ -33,7 +33,7 @@ function Gallery() {
           return (
             <div
               onClick={hasPrev ? clickHandler : () => null}
-              className={`absolute z-[100] left-[4%] sm:left-[5%] top-[33%] sm:top-[42%]  min-w-[45px] min-h-[45px] sm:min-w-[70px] sm:min-h-[70px] w-[5vw] h-[5vw] rounded-[100%] cursor-pointer ${
+              className={`absolute z-[100] left-[4%] sm:left-[5%] top-[38%] sm:top-[42%]  min-w-[45px] min-h-[45px] sm:min-w-[70px] sm:min-h-[70px] w-[5vw] h-[5vw] rounded-[100%] cursor-pointer ${
                 hasPrev ? "bg-[#f2f2f2]" : "bg-transparent"
               } flex items-center justify-center`}
             >
