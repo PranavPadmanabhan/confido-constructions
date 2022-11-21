@@ -39,7 +39,7 @@ function Gallery() {
             >
               <FaChevronLeft
                 color={hasPrev ? "#9e9e9e" : "transparent"}
-                size={30}
+                size={window.innerWidth < 600 ? 24 : 30}
               />
             </div>
           );
