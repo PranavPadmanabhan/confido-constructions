@@ -24,6 +24,15 @@ module.exports = {
         'header-overlay':'rgba(0,0,0,0.35)',
         'medium-opacity':'rgba(0,0,0,0.5)',
 
+      },
+      fontFamily:{
+        tommyThin:["MadeTommyThin", "cursive"],
+        tommyRegular:["MadeTommyRegular", "cursive"],
+        tommyMedium:["MadeTommyMedium", "cursive"],
+        tommyBold:["MadeTommyBold", "cursive"],
+        tommyExtra:["MadeTommyExtraBold", "cursive"],
+        poppins:['Poppins', 'sans-serif']
+
       }
     },
   },

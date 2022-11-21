@@ -1,3 +1,32 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "MadeTommyThin";
+  src: url("./assets/fonts/MADE\ TOMMY\ Light_PERSONAL\ USE.otf");
+}
+
+@font-face {
+  font-family: "MadeTommyMedium";
+  src: url("./assets/fonts/MADE\ TOMMY\ Medium_PERSONAL\ USE.otf");
+}
+@font-face {
+  font-family: "MadeTommyRegular";
+  src: url("./assets/fonts/MADE\ TOMMY\ Regular_PERSONAL\ USE.otf");
+}
+@font-face {
+  font-family: "MadeTommyBold";
+  src: url("./assets/fonts/MADE\ TOMMY\ Bold_PERSONAL\ USE.otf");
+}
+
+@font-face {
+  font-family: "MadeTommyExtraBold";
+  src: url("./assets/fonts/MADE\ TOMMY\ ExtraBold_PERSONAL\ USE.otf");
+}
+
+@layer base {
+  html {
+    font-family: poppins, sans-serif;
+  }
+}
