@@ -1,18 +1,60 @@
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
 import logo from "../assets/LOGO_1.svg";
 import { FaBars } from "react-icons/fa";
 import { Carousel } from "react-responsive-carousel";
 import home from "../assets/02.jpg";
 import home2 from "../assets/01.jpg";
+import { Spinner } from "react-bootstrap";
+import { LoaderContext } from "../contexts/LoadingContext";
+import { images } from "../constants/constants";
 // import Carousel from 'react-bootstrap/Carousel';
 
 function Header() {
+  const { loading, setLoading } = useContext(LoaderContext);
+
+  const cacheImages = async () => {
+    setLoading(true);
+    const promises = images.map((src) => {
+      return new Promise<void>(function (resolve, reject) {
+        const img = new Image();
+        img.src = src;
+        img.onload = () => resolve();
+        img.onerror = () => reject();
+      });
+    });
+    await Promise.all(promises).then(() => {
+      cacheImage();
+    });
+    setLoading(false);
+  };
+
+  const cacheImage = async () => {
+    setLoading(true);
+    await new Promise<void>(function (resolve, reject) {
+      const img = new Image();
+      img.src = home;
+      img.onload = () => resolve();
+      img.onerror = () => reject();
+    });
+    setLoading(false);
+  };
+
+  useEffect(() => {
+    cacheImages();
+  }, []);
+
   return (
     <div
       style={{
         backgroundImage: `url(${home})`,
       }}
-      className="relative h-[95vh] w-full bg-gray-200 bg-no-repeat bg-cover bg-center shadow-header pt-[3%] box-border before:content-[''] before:absolute before:w-full before:h-full before:top-0 before:bg-medium-opacity backdrop-brightness-75 backdrop-contrast-125 flex flex-col items-center justify-start"
+      className={`relative h-[95vh] w-full ${
+        !loading ? "bg-gray-200" : "bg-white"
+      } bg-no-repeat bg-cover bg-center ${
+        !loading ? "shadow-header" : "shadow-none"
+      } pt-[3%] box-border before:content-[''] before:absolute before:w-full before:h-full before:top-0 ${
+        !loading ? "before:bg-medium-opacity" : "before:bg-white"
+      } backdrop-brightness-75 backdrop-contrast-125 flex flex-col items-center justify-start`}
     >
       <div className="w-full h-[15%] sm:h-[20%] flex items-center justify-between px-[8%] sm:px-[12%] box-border ">
         <img src={logo} alt="" className="z-[100] w-[35%]  sm:w-[18%]" />
