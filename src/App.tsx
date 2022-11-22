@@ -16,8 +16,12 @@ function App() {
   return (
     <div className=" w-full min-h-full flex flex-col items-center justify-start bg-white scrollbar-hide">
       {loading ? (
-        <div className="fixed top-0 z-[100] w-full h-full bg-black flex items-center justify-center">
+        <div className="fixed top-0 z-[100] w-full h-full bg-black flex flex-col items-center justify-center">
           <img src={loader} alt="" className="w-[100px] h-[100px]" />
+          <h1 className="text-white text-[1rem] sm:text-[1.2rem] text-center">
+            Getting Everything Ready
+            <br /> Please wait..
+          </h1>
         </div>
       ) : (
         <>
