@@ -58,7 +58,7 @@ function Header() {
     >
       <div className="w-full h-[15%] sm:h-[20%] flex items-center justify-between px-[8%] sm:px-[12%] box-border ">
         <img src={logo} alt="" className="z-[100] w-[35%]  sm:w-[18%]" />
-        <div className="z-[100] w-[50%] h-full flex items-center justify-end sm:justify-between">
+        <div className="z-[100] w-[60%] h-full flex items-center justify-end sm:justify-between">
           <span className="hidden sm:block text-white text-[1.2rem] font-light">
             Home
           </span>
@@ -77,39 +77,36 @@ function Header() {
           <FaBars className="z-[100]" color="white" size={29} />
         </div>
       </div>
-      <div className="w-full h-[30vh] sm:h-[50vh]  flex flex-row items-center justify-center sm:justify-between px-[8%] sm:px-[12%] box-border mt-[15%] sm:mt-0">
+      <div className="w-full min-w-[30vw] h-[30vh] sm:h-[50vh]  flex flex-row items-center justify-center sm:justify-between px-[8%] sm:pl-[12%] box-border mt-[15%] sm:mt-0">
         <p className="z-[100] text-white text-[7.5vw] sm:text-[2.5rem] font-light max-w-[100%] sm:max-w-[45%] text-center sm:text-left tracking-wider">
           YOUR MOST
           <br /> <strong className="font-medium">TRUSTED</strong> BUILDING
           <br /> <strong className="font-medium">PARTNER</strong>
         </p>
         <Carousel
-          className="hidden sm:flex w-[30vw] h-[20vh] self-center pt-5"
+          className="hidden sm:flex w-[50%] h-[20vh] self-center pt-5 border-2  box-border"
           autoPlay={true}
+          renderItem={(item, options) => {
+            return (
+              <div className="border-2 min-w-[120px] w-full  h-[70px]">
+                {item}
+              </div>
+            );
+          }}
           infiniteLoop={true}
           showArrows={false}
           dynamicHeight={true}
           showStatus={false}
           swipeable={true}
         >
-          <div className="h-[100%] min-w-[100%] w-[100%] flex-1 bg-transparent ">
-            <p className="text-semi-transparent text-[1.1rem] text-center  font-normal">
-              "Home is where you feel loved,
-              <br /> appreciated and safe"
-            </p>
-          </div>
-          <div className="h-[100%] min-w-[100%] w-[100%] flex-1 bg-transparent ">
-            <p className="text-semi-transparent text-[4vw] sm:text-[1.1rem] font-normal">
-              "Home is where you feel loved,
-              <br /> appreciated and safe"
-            </p>
-          </div>
-          <div className="h-[100%] min-w-[100%] w-[100%] flex-1 bg-transparent ">
-            <p className="text-semi-transparent text-[4vw] sm:text-[1.1rem] font-normal">
-              "Home is where you feel loved,
-              <br /> appreciated and safe"
-            </p>
-          </div>
+          <p className="text-white">
+            "Home is where you feel loved,
+            <br /> appreciated and safe"
+          </p>
+          <p className="text-white">
+            "Home is where you feel loved,
+            <br /> appreciated and safe"
+          </p>
         </Carousel>
       </div>
       <div className="w-full h-[30%] sm:h-[23%] flex flex-col sm:flex-row items-center justify-evenly sm:justify-between px-[8%] sm:px-[12%] box-border mt-[15%] sm:mt-0 ">
