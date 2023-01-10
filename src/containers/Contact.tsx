@@ -9,7 +9,7 @@ function Contact() {
 
     // emailjs
     //   .sendForm(
-    //     "service_x04qc0v",
+    //     "service_eeuq9os",
     //     "template_9xas9kc",
     //     form.current,
     //     "6j28pDZer1sPVgfl5"

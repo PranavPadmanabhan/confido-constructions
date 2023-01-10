@@ -4,10 +4,12 @@ import { FaBars } from "react-icons/fa";
 import { Carousel } from "react-responsive-carousel";
 import home from "../assets/02.jpg";
 import home2 from "../assets/01.jpg";
+import bg from "../assets/PERIYARAM.jpg"
 import { Spinner } from "react-bootstrap";
 import { LoaderContext } from "../contexts/LoadingContext";
 import { images } from "../constants/constants";
 // import Carousel from 'react-bootstrap/Carousel';
+
 
 function Header() {
   const { loading, setLoading } = useContext(LoaderContext);
@@ -83,27 +85,33 @@ function Header() {
           <br /> <strong className="font-medium">TRUSTED</strong> BUILDING
           <br /> <strong className="font-medium">PARTNER</strong>
         </p>
-        <Carousel
-          className="hidden sm:flex w-[50%] h-[20vh] self-center pt-5 border-2  box-border"
+        <Carousel 
+          className="hidden  sm:flex   w-[50%] min-w-[300px] h-[20vh] self-center  justify-evenly items-center  py-6  box-border"
           autoPlay={true}
-          renderItem={(item, options) => {
-            return (
-              <div className="border-2 min-w-[120px] w-full  h-[70px]">
-                {item}
-              </div>
-            );
-          }}
+          
+        
           infiniteLoop={true}
           showArrows={false}
           dynamicHeight={true}
           showStatus={false}
           swipeable={true}
+          width={1900}
+          showIndicators={true}
+          
         >
-          <p className="text-white">
+          <p className="text-white font-light pb-10 box-border  ">
             "Home is where you feel loved,
             <br /> appreciated and safe"
           </p>
-          <p className="text-white">
+          <p className="text-white font-light pb-10 box-border  ">
+            "Home is where you feel loved,
+            <br /> appreciated and safe"
+          </p>
+          <p className="text-white font-light pb-10 box-border  ">
+            "Home is where you feel loved,
+            <br /> appreciated and safe"
+          </p>
+          <p className="text-white font-light pb-10 box-border">
             "Home is where you feel loved,
             <br /> appreciated and safe"
           </p>
@@ -119,7 +127,7 @@ function Header() {
           BUILD YOUR <strong className="font-medium">DREAM HOME</strong>
           &nbsp;WITH US
         </p>
-        <button className="z-[100] bg-green-800 px-8  sm:px-6 py-2 rounded-[5px] text-white font-light">
+        <button className="z-[100] bg-green-accent px-8  sm:px-6 py-2 rounded-[5px] text-white font-light">
           BUILD YOUR HOME
         </button>
       </div>

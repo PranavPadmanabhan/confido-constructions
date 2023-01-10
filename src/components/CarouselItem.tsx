@@ -23,10 +23,10 @@ function CarouselItem({ image1, image2, image3, title }: props) {
           setIsExpanded(true);
         }}
         style={{ backgroundImage: `url(${image1})` }}
-        className="h-[65%] sm:h-[93%] w-[80%] sm:w-[42%] bg-transparent rounded-3xl mr-0 sm:mr-[3%] bg-no-repeat bg-center bg-cover shadow-carousel-item flex flex-col items-start backdrop-brightness-75 justify-end p-[5%] sm:p-[2%] box-border"
+        className="h-[65%] sm:h-[93%] w-[80%] sm:w-[42%] bg-transparent rounded-3xl  mr-0 sm:mr-[3%] bg-no-repeat bg-center bg-cover shadow-carousel-item flex flex-col items-start backdrop-brightness-75 justify-end p-[5%] sm:p-[2%] box-border"
       >
         <p
-          className={`text-white text-[4vw] sm:text-[1.4rem] ${width} text-left`}
+          className={`  -mb-7 text-white text-[4vw] sm:text-[1.4rem] ${width} text-left `}
         >
           {title}
         </p>

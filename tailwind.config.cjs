@@ -19,7 +19,7 @@ module.exports = {
       },
       colors:{
         'semi-transparent':'rgba(250,250,250,0.9)',
-        'green-accent':'rgba(3, 115, 41,0.6)',
+        'green-accent':'rgba(0,79,30.93)',
         'low-opacity':'rgba(0,0,0,0.1)',
         'header-overlay':'rgba(0,0,0,0.35)',
         'medium-opacity':'rgba(0,0,0,0.5)',
