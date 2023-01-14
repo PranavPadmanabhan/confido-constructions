@@ -7,22 +7,22 @@ function Contact() {
   const sendEmail = (e: any) => {
     e.preventDefault();
 
-    // emailjs
-    //   .sendForm(
-    //     "service_eeuq9os",
-    //     "template_9xas9kc",
-    //     form.current,
-    //     "6j28pDZer1sPVgfl5"
-    //   )
-    //   .then(
-    //     (result) => {
-    //       console.log(result.text);
-    //       console.log("success");
-    //     },
-    //     (error) => {
-    //       console.log(error.text);
-    //     }
-    //   );
+    emailjs
+      .sendForm(
+        "service_q5ijf1i",
+        "template_qh7rt32",
+        form.current,
+        "6cbSMIurPsuuTUomn"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          console.log("success");
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
     form.current.reset();
   };
   return (
