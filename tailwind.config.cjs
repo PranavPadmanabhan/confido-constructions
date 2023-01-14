@@ -19,7 +19,8 @@ module.exports = {
       },
       colors:{
         'semi-transparent':'rgba(250,250,250,0.9)',
-        'green-accent':'rgba(0,79,3,0.5)',
+        'green-accent':'rgba(0,79,3,0.6)',
+        'green-button':'#004f1e',
         'low-opacity':'rgba(0,0,0,0.1)',
         'header-overlay':'rgba(0,0,0,0.35)',
         'medium-opacity':'rgba(0,0,0,0.5)',
