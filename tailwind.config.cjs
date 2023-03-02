@@ -24,7 +24,7 @@ module.exports = {
         'green-button':'#004f1e',
         'low-opacity':'rgba(0,0,0,0.1)',
         'header-overlay':'rgba(0,0,0,0.35)',
-        'medium-opacity':'rgba(0,0,0,0.75)',
+        'medium-opacity':'rgba(0,0,0,0.3)',
         'avg-opacity':'rgba(0,0,0,0.5)',
 
 
