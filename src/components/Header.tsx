@@ -52,7 +52,7 @@ function Header() {
       style={{
         backgroundImage: `url(${bg})`,
       }}
-      className={`relative h-[95vh] w-full ${!loading ? "bg-gray-200" : "bg-white"
+      className={`relative h-[95vh] w-full ${!loading ? "bg-black" : "bg-white"
         } bg-no-repeat bg-cover bg-center ${!loading ? "shadow-header" : "shadow-none"
         } pt-[3%] box-border before:content-[''] before:absolute before:w-full before:h-full before:top-0 ${!loading ? "before:bg-medium-opacity" : "before:bg-white"
         } backdrop-brightness-50 backdrop-contrast-150 flex flex-col items-center justify-start`}
