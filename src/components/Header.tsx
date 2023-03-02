@@ -17,17 +17,17 @@ function Header() {
 
   const cacheImages = async () => {
     setLoading(true);
-    // const promises = images.map((src) => {
-    //   return new Promise<void>(function (resolve, reject) {
-    //     const img = new Image();
-    //     img.src = src;
-    //     img.onload = () => resolve();
-    //     img.onerror = () => reject();
-    //   });
-    // });
-    // await Promise.all(promises).then(() => {
+    const promises = images.map((src) => {
+      return new Promise<void>(function (resolve, reject) {
+        const img = new Image();
+        img.src = src;
+        img.onload = () => resolve();
+        img.onerror = () => reject();
+      });
+    });
+    await Promise.all(promises).then(() => {
       cacheImage();
-    // });
+    });
     setLoading(false);
   };
 
@@ -36,14 +36,15 @@ function Header() {
     await new Promise<void>(function (resolve, reject) {
       const img = new Image();
       img.src = bg;
-      img.onload = () => resolve();
+      img.onload = () => { resolve(); setLoading(false) };
       img.onerror = () => reject();
     });
     setLoading(false);
   };
 
   useEffect(() => {
-    cacheImages();
+    // cacheImages();
+    cacheImage()
   }, []);
 
   return (
@@ -51,13 +52,10 @@ function Header() {
       style={{
         backgroundImage: `url(${bg})`,
       }}
-      className={`relative h-[95vh] w-full ${
-        !loading ? "bg-gray-200" : "bg-white"
-      } bg-no-repeat bg-cover bg-center ${
-        !loading ? "shadow-header" : "shadow-none"
-      } pt-[3%] box-border before:content-[''] before:absolute before:w-full before:h-full before:top-0 ${
-        !loading ? "before:bg-medium-opacity" : "before:bg-white"
-      } backdrop-brightness-50 backdrop-contrast-150 flex flex-col items-center justify-start`}
+      className={`relative h-[95vh] w-full ${!loading ? "bg-gray-200" : "bg-white"
+        } bg-no-repeat bg-cover bg-center ${!loading ? "shadow-header" : "shadow-none"
+        } pt-[3%] box-border before:content-[''] before:absolute before:w-full before:h-full before:top-0 ${!loading ? "before:bg-medium-opacity" : "before:bg-white"
+        } backdrop-brightness-50 backdrop-contrast-150 flex flex-col items-center justify-start`}
     >
       <NavBar />
       <div className="w-full min-w-[30vw] h-[30vh] sm:h-[50vh]  flex flex-row items-center justify-center sm:justify-between px-[8%] sm:pl-[12%] box-border mt-[15%] sm:mt-0">
