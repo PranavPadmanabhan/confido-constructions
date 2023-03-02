@@ -26,6 +26,8 @@ module.exports = {
         'header-overlay':'rgba(0,0,0,0.35)',
         'medium-opacity':'rgba(0,0,0,0.6)',
         'avg-opacity':'rgba(0,0,0,0.5)',
+        'mediumLow-opacity':'rgba(0,0,0,0.4)',
+
 
 
       },
