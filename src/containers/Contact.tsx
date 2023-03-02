@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
+import "../App.css"
 
 function Contact() {
   const form = useRef<any>();
@@ -28,7 +29,7 @@ function Contact() {
   return (
     <div id="contact" className="w-full h-[55vh] mt-5 sm:mt-0 sm:h-[30vh] bg-[#004f1e] flex flex-col sm:flex-row items-center justify-start sm:justify-between pt-[5%] sm:pt-0 box-border">
       <div className="w-[90%] sm:w-[30%] h-[10%] sm:h-full flex flex-col sm:flex-row items-center justify-center sm:justify-end pr-0 sm:pr-[8%] box-border ">
-        <p className="text-[5vw] sm:text-[1.75rem] text-white font-light max-w-[50%] sm:max-w-[30%] -mt-3">
+        <p id="text6" className="text-[5vw] sm:text-[1.75rem] text-white font-light max-w-[50%] sm:max-w-[30%] -mt-3">
           CONTACT FORM
         </p>
       </div>
@@ -61,7 +62,7 @@ function Contact() {
             className="w-[95%] sm:w-[50%] h-[90px] rounded-xl bg-white text-[0.8rem] scrollbar-hide placeholder:text-[0.8rem] p-3 focus:outline-none"
           ></textarea>
         </div>
-        <div className="w-[90%] h-[20%] sm:h-[40%] flex flex-col sm:flex-row items-center justify-start sm:justify-between -mt-0 sm:-mt-8 pl-0 sm:pl-4 box-border ">
+        <div id="btncontainer" className="w-[90%] h-[20%] sm:h-[40%] flex flex-col sm:flex-row items-center justify-start sm:justify-between -mt-0 sm:-mt-8 pl-0 sm:pl-4 box-border ">
           <div className="w-[90%] sm:w-[60%] h-[2px] bg-white my-2 sm:my-0" />
           <button
             type="submit"

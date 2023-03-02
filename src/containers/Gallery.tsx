@@ -19,7 +19,7 @@ function Gallery() {
         GALLERY
       </h1>
       <Carousel
-        className="relative w-full h-[100%] sm:h-[88%]"
+        className="carousel2 relative w-full h-[100%] sm:h-[88%]"
         showStatus={false}
         showIndicators={false}
         showArrows={true}

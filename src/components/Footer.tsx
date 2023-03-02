@@ -5,10 +5,12 @@ import instagram from "../assets/inst.svg";
 import linkedin from "../assets/link.svg";
 import facebook from "../assets/fb.svg";
 import home from "../assets/02.jpg";
+import "../App.css"
 
 function Footer() {
   return (
     <footer
+     id="footer"
       style={{ backgroundImage: `url(${home})` }}
       className="relative w-full h-[90vh]  bg-white bg-no-repeat bg-center bg-cover shadow-header before:content-[''] before:absolute before:w-full before:h-full before:bg-medium-opacity backdrop-brightness-75 flex flex-col items-center justify-center"
     >

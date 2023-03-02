@@ -1,6 +1,7 @@
 import React from "react";
 import ServiceCard from "../components/ServiceCard";
 import { images } from "../constants/constants";
+import "../App.css"
 
 function Services() {
   return (

@@ -16,8 +16,9 @@ function CarouselItem({ image1, image2, image3, title }: props) {
   const { isExpanded, setIsExpanded, image, setImage } =
     useContext(ImageViewContext);
   return (
-    <div className="w-full sm:mt-0 -mt-[15%] h-[60vh] sm:h-[84vh] bg-transparent flex items-center justify-center">
+    <div id="image" className="w-full sm:mt-0 -mt-[15%] h-[60vh] sm:h-[84vh] bg-transparent flex items-center justify-center">
       <div
+      id="image2"
         onClick={() => {
           setImage(image1);
           setIsExpanded(true);
@@ -32,8 +33,9 @@ function CarouselItem({ image1, image2, image3, title }: props) {
         </p> */}
       </div>
       {image2 && image3 && (
-        <div className="w-[28%] h-[93%] hidden sm:flex flex-col items-center justify-between bg-transparent ">
+        <div id="imagecontainer" className="w-[28%] h-[93%] hidden sm:flex flex-col items-center justify-between bg-transparent ">
           <div
+           id="image3"
             onClick={() => {
               setImage(image2);
               setIsExpanded(true);
@@ -42,6 +44,7 @@ function CarouselItem({ image1, image2, image3, title }: props) {
             className="h-[48%] w-full rounded-2xl bg-transparent bg-no-repeat bg-center bg-cover backdrop-brightness-75"
           ></div>
           <div
+           id="image4"
             onClick={() => {
               setImage(image3);
               setIsExpanded(true);

@@ -9,6 +9,7 @@ import { LoaderContext } from "../contexts/LoadingContext";
 import { images } from "../constants/constants";
 import { useAppContext } from "../contexts/appContext";
 import NavBar from "./NavBar";
+import "../App.css"
 // import Carousel from 'react-bootstrap/Carousel';
 
 function Header() {
@@ -52,6 +53,7 @@ function Header() {
       style={{
         backgroundImage: `url(${bg})`,
       }}
+      id="header"
       className={`relative h-[95vh] w-full ${!loading ? "bg-black" : "bg-white"
         } bg-no-repeat bg-cover bg-center ${!loading ? "shadow-header" : "shadow-none"
         } pt-[3%] box-border before:content-[''] before:absolute before:w-full before:h-full before:top-0 ${!loading ? "before:bg-mediumLow-opacity sm:before:bg-medium-opacity" : "before:bg-white"
@@ -59,7 +61,7 @@ function Header() {
     >
       <NavBar />
       <div className="w-full min-w-[30vw] h-[30vh] sm:h-[50vh]  flex flex-row items-center justify-center sm:justify-between px-[8%] sm:pl-[12%] box-border mt-[15%] sm:mt-0">
-        <p className="z-[100] text-white text-[7.5vw] sm:text-[2.5rem] font-light max-w-[100%] sm:max-w-[45%] text-center sm:text-left tracking-wider">
+        <p id="text1"  className="z-[100] text-white text-[7.5vw] sm:text-[2.5rem] font-light max-w-[100%] sm:max-w-[45%] text-center sm:text-left tracking-wider">
           YOUR MOST
           <br /> <strong className="font-medium">TRUSTED</strong> BUILDING
           <br /> <strong className="font-medium">PARTNER</strong>
@@ -94,7 +96,7 @@ function Header() {
         </Carousel>
       </div>
       <div className="w-full h-[30%] sm:h-[23%] flex flex-col sm:flex-row items-center justify-evenly sm:justify-between px-[8%] sm:px-[12%] box-border mt-[15%] sm:mt-0 ">
-        <p className="z-[100] hidden sm:flex text-white font-light text-[7vw] text-center sm:text-[2rem] tracking-wider">
+        <p id="text2" className="z-[100] hidden sm:flex text-white font-light text-[7vw] text-center sm:text-[2rem] tracking-wider">
           BUILD&nbsp; YOUR &nbsp;
           <strong className="font-medium">DREAM HOME</strong>
           &nbsp; WITH&nbsp; US
@@ -103,7 +105,7 @@ function Header() {
           BUILD YOUR <strong className="font-medium">DREAM HOME</strong>
           &nbsp;WITH US
         </p>
-        <a href="#contact" className="z-[100] bg-green-button px-8  sm:px-6 py-2 rounded-[5px] text-white font-light">
+        <a id="btn1" href="#contact" className="z-[100] bg-green-button px-8  sm:px-6 py-2 rounded-[5px] text-white font-light">
           BUILD YOUR HOME
         </a>
       </div>

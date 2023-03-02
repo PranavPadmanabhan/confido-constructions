@@ -1,0 +1,113 @@
+@media (max-width:1100px){
+    @media (min-height:1500px){
+        #navbar {
+            height: 100px;
+        }
+        #header{
+            height: 30vh;
+        }
+        #text1 {
+            font-size: 1.7rem;
+        }
+        #text2 {
+            font-size: 1.3rem;
+            margin-top: -10%;
+        }
+        #btn1{
+            margin-top: -10%;
+
+        }
+        #about {
+            height: 40vh;
+        }
+
+        #img1 {
+            height: 15vh;
+        }
+        #container {
+            background-color: aqua;
+            justify-content: flex-start;
+            height: 15vh;
+        }
+        #text3 {
+            font-size: 1rem;
+            margin-top: -10%;
+        }
+        .carousel {
+            max-height: 20vh;
+            max-width: 98%;
+        }
+        .carousel-item{
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100%;
+            width: 100%;
+            max-height: 20vh;
+        }
+
+        #details{
+            height: 70%;
+        }
+        #text4 {
+            font-size: 1rem;
+        }
+
+        #services {
+            min-height: 35vh;
+        }
+        #service-item {
+            min-height: 10vh;
+        }
+        #text5 {
+            font-size: 1rem;
+        }
+        #gallery {
+            height: 25vh;
+        }
+        .carousel2 {
+            /* background-color: aqua; */
+        }
+
+        #image {
+            height: 18vh;
+            width: 98%;
+        }
+
+
+        #contact {
+            height: 13vh;
+        }
+        #text6 {
+            margin-top: -2vh;
+            font-size: 1.7rem;
+        }
+        #btncontainer{
+            margin-top: -15%;
+        }
+
+        #footer {
+            height: 30vh;
+        }
+        #image2{
+            height: 98%;
+            background-size: cover;
+        }
+        #imagecontainer{
+            height: 100%;
+        }
+        #image3{
+            height: 48%;
+            background-size: cover;
+        }
+        #image4{
+            height: 48%;
+            background-size: cover;
+        }
+
+        #imageview {
+            height: 35vh;
+            background-color: aqua;
+        }
+    }
+}
