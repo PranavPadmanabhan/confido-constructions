@@ -103,9 +103,9 @@ function Header() {
           BUILD YOUR <strong className="font-medium">DREAM HOME</strong>
           &nbsp;WITH US
         </p>
-        <button className="z-[100] bg-green-button px-8  sm:px-6 py-2 rounded-[5px] text-white font-light">
+        <a href="#contact" className="z-[100] bg-green-button px-8  sm:px-6 py-2 rounded-[5px] text-white font-light">
           BUILD YOUR HOME
-        </button>
+        </a>
       </div>
     </div>
   );
