@@ -17,17 +17,17 @@ function Header() {
 
   const cacheImages = async () => {
     setLoading(true);
-    const promises = images.map((src) => {
-      return new Promise<void>(function (resolve, reject) {
-        const img = new Image();
-        img.src = src;
-        img.onload = () => resolve();
-        img.onerror = () => reject();
-      });
-    });
-    await Promise.all(promises).then(() => {
+    // const promises = images.map((src) => {
+    //   return new Promise<void>(function (resolve, reject) {
+    //     const img = new Image();
+    //     img.src = src;
+    //     img.onload = () => resolve();
+    //     img.onerror = () => reject();
+    //   });
+    // });
+    // await Promise.all(promises).then(() => {
       cacheImage();
-    });
+    // });
     setLoading(false);
   };
 
