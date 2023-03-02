@@ -11,7 +11,7 @@ import { images } from "../constants/constants";
 
 function About() {
   return (
-    <section className="w-full h-auto sm:h-[130vh] flex flex-col items-center justify-start  scrollbar-hide">
+    <section id="about" className="w-full h-auto sm:h-[130vh] flex flex-col items-center justify-start  scrollbar-hide">
       <div className="relative w-full h-[105vh] sm:h-[32%] flex flex-col sm:flex-row items-center justify-center">
         <div
           style={{ backgroundImage: `url(${home1})` }}
@@ -25,7 +25,7 @@ function About() {
           style={{ backgroundImage: `url(${home1})` }}
           className="w-full h-full  bg-no-repeat bg-cover bg-center shadow-img backdrop-brightness-75"
         ></div>
-        <div className="absolute w-full h-full bg-green-accent flex flex-col sm:flex-row items-center justify-evenly sm:justify-between px-[8%] box-border">
+        <div className="absolute w-full h-full backdrop-contrast-200 bg-green-accent flex flex-col sm:flex-row items-center justify-evenly sm:justify-between px-[8%] box-border">
           <div className="w-full h-[30%] sm:h-full flex flex-col items-center justify-center ">
             <h1 className="text-white mt-0 sm:-mt-[15%] mb-[3%] sm:mb-[8%] text-[1.1rem] font-light">
               WHY CHOOSE <strong className="font-medium">CONFIDO </strong>?

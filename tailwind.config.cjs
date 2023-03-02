@@ -13,17 +13,20 @@ module.exports = {
       boxShadow:{
         'header':' inset 0px 0px 169px 48px rgba(0,0,0,0.97)',
         'img':' inset 0px 0px 70px 20px rgba(0,0,0,0.97)',
+        'service-img':' inset 0px 0px 70px 30px rgba(0,0,0,0.97)',
         'carousel-img':'-26px -25px 0px 0px #b9b9b9',
         'carousel-item':'10px 10px 10px -5px #a8a8a8',
 
       },
       colors:{
         'semi-transparent':'rgba(250,250,250,0.9)',
-        'green-accent':'rgba(0,79,3,0.6)',
+        'green-accent':'rgba(1, 66, 4,0.8)',
         'green-button':'#004f1e',
         'low-opacity':'rgba(0,0,0,0.1)',
         'header-overlay':'rgba(0,0,0,0.35)',
-        'medium-opacity':'rgba(0,0,0,0.5)',
+        'medium-opacity':'rgba(0,0,0,0.75)',
+        'avg-opacity':'rgba(0,0,0,0.5)',
+
 
       },
       fontFamily:{

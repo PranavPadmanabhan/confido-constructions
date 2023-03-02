@@ -26,7 +26,7 @@ function Contact() {
     form.current.reset();
   };
   return (
-    <div className="w-full h-[55vh] mt-5 sm:mt-0 sm:h-[30vh] bg-[#004f1e] flex flex-col sm:flex-row items-center justify-start sm:justify-between pt-[5%] sm:pt-0 box-border">
+    <div id="contact" className="w-full h-[55vh] mt-5 sm:mt-0 sm:h-[30vh] bg-[#004f1e] flex flex-col sm:flex-row items-center justify-start sm:justify-between pt-[5%] sm:pt-0 box-border">
       <div className="w-[90%] sm:w-[30%] h-[10%] sm:h-full flex flex-col sm:flex-row items-center justify-center sm:justify-end pr-0 sm:pr-[8%] box-border ">
         <p className="text-[5vw] sm:text-[1.75rem] text-white font-light max-w-[50%] sm:max-w-[30%] -mt-3">
           CONTACT FORM

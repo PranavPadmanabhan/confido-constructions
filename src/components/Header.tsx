@@ -5,13 +5,15 @@ import { Carousel } from "react-responsive-carousel";
 import home from "../assets/02.jpg";
 import home2 from "../assets/01.jpg";
 import bg from "../assets/PERIYARAM.jpg";
-import { Spinner } from "react-bootstrap";
 import { LoaderContext } from "../contexts/LoadingContext";
 import { images } from "../constants/constants";
+import { useAppContext } from "../contexts/appContext";
+import NavBar from "./NavBar";
 // import Carousel from 'react-bootstrap/Carousel';
 
 function Header() {
   const { loading, setLoading } = useContext(LoaderContext);
+  const { setDrawerOpen } = useAppContext()
 
   const cacheImages = async () => {
     setLoading(true);
@@ -55,29 +57,9 @@ function Header() {
         !loading ? "shadow-header" : "shadow-none"
       } pt-[3%] box-border before:content-[''] before:absolute before:w-full before:h-full before:top-0 ${
         !loading ? "before:bg-medium-opacity" : "before:bg-white"
-      } backdrop-brightness-75 backdrop-contrast-125 flex flex-col items-center justify-start`}
+      } backdrop-brightness-50 backdrop-contrast-150 flex flex-col items-center justify-start`}
     >
-      <div className="w-full h-[15%] sm:h-[20%] flex items-center justify-between px-[8%] sm:px-[12%] box-border ">
-        <img src={logo} alt="" className="z-[100] w-[35%]  sm:w-[18%]" />
-        <div className="z-[100] w-[60%] h-full flex items-center justify-end sm:justify-between">
-          <span className="hidden sm:block text-white text-[1.2rem] font-light">
-            Home
-          </span>
-          <span className="hidden sm:block text-white text-[1.2rem] font-light">
-            About Us
-          </span>
-          <span className="hidden sm:block text-white text-[1.2rem] font-light">
-            Services
-          </span>
-          <span className="hidden sm:block text-white text-[1.2rem] font-light">
-            Gallery
-          </span>
-          <span className="hidden sm:block text-white text-[1.2rem] font-light">
-            Contact Us
-          </span>
-          <FaBars className="z-[100]" color="white" size={29} />
-        </div>
-      </div>
+      <NavBar />
       <div className="w-full min-w-[30vw] h-[30vh] sm:h-[50vh]  flex flex-row items-center justify-center sm:justify-between px-[8%] sm:pl-[12%] box-border mt-[15%] sm:mt-0">
         <p className="z-[100] text-white text-[7.5vw] sm:text-[2.5rem] font-light max-w-[100%] sm:max-w-[45%] text-center sm:text-left tracking-wider">
           YOUR MOST

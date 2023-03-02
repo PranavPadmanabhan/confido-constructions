@@ -4,7 +4,7 @@ import { images } from "../constants/constants";
 
 function Services() {
   return (
-    <section className="w-full min-h-[100vh] bg-white flex flex-col items-start justify-start px-[12%] box-border pt-[4%]">
+    <section id="services" className="w-full min-h-[100vh] bg-white flex flex-col items-start justify-start px-[12%] box-border pt-[4%]">
       <h1 className="text-black font-light text-[1.9rem] tracking-wider">
         We <strong className="font-bold text-[#065524]">BEST</strong> in
       </h1>

@@ -14,7 +14,7 @@ function Gallery() {
   console.log(length);
 
   return (
-    <div className="relative w-full h-[50vh] sm:h-[100vh] flex flex-col items-center justify-start bg-white pt-0 sm:pt-[2%] pb-[5%] box-border ">
+    <div id="gallery" className="relative w-full h-[50vh] sm:h-[100vh] flex flex-col items-center justify-start bg-white pt-0 sm:pt-[2%] pb-[5%] box-border ">
       <h1 className="text-[#004a19] text-[1.9rem] font-bold self-start ml-[13%] mb-[2%] mt-[2%] sm:mt-0 tracking-widest">
         GALLERY
       </h1>
