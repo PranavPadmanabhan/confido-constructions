@@ -21,10 +21,10 @@ function App() {
       {loading ? (
         <div className="fixed top-0 z-[100] w-full h-full bg-black flex flex-col items-center justify-center">
           <img src={loader} alt="" className="w-[160px] sm:w-[200px] animate-pulse h-[100px]" />
-          <h1 className="text-white text-[1rem] sm:text-[1.2rem] text-center mt-1">
+          {/* <h1 className="text-white text-[1rem] sm:text-[1.2rem] animate-pulse text-center mt-1">
             Getting Everything Ready
             <br /> Please wait..
-          </h1>
+          </h1> */}
         </div>
       ) : (
         <>
